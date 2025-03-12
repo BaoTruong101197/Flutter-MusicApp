@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:Flutter_MusicApp/ui/account/account.dart';
-import 'package:Flutter_MusicApp/ui/discovery/discovery.dart';
-import 'package:Flutter_MusicApp/ui/settings/settings.dart';
-import 'package:Flutter_MusicApp/ui/home/home.dart';
+import 'package:Flutter_MusicApp/phoneapp/phonepage.dart';
+import 'package:Flutter_MusicApp/settingapp/settingspage.dart';
+import 'package:Flutter_MusicApp/mediaapp/view/mediapage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -27,8 +26,7 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   final List<Widget> _tabs = [
     const HomePage(),
-    const DiscoveryPage(),
-    const AccountPage(),
+    const PhonePage(),
     const SettingsPage(),
   ];
 
@@ -47,9 +45,8 @@ class _MainAppState extends State<MainApp> {
         tabBar: CupertinoTabBar(
           backgroundColor: Theme.of(context).colorScheme.onInverseSurface,
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.album), label: 'Discovery'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
+            BottomNavigationBarItem(icon: Icon(Icons.usb), label: 'Media'),
+            BottomNavigationBarItem(icon: Icon(Icons.phone), label: 'Phone'),
             BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
           ]
         ), 
